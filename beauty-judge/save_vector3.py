@@ -19,7 +19,7 @@ def convertImageVector3(img):
     return img_vector3[0]
 
 
-def main():
+def getDatas():
     """
     3次元ベクトル学習画像データと正解ラベルを対にして、pickleファイルにして保存する
     """
@@ -51,6 +51,6 @@ def learn(datas, labels):
     print("learned.")
 
 if __name__ == '__main__':
-    datas, labels = main()
+    datas, labels = getDatas()
     print(len(datas), len(labels))
     learn(datas, labels)

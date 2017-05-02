@@ -17,7 +17,6 @@ def convertImageVector3(img):
     """
     3次元(100x100x3(RGB))から1次元に変換する
     """
-    print(img.shape)
     s = img.shape[0] * img.shape[1] * img.shape[2]
     img_vector3 = img.reshape(1, s)
     return img_vector3[0]
@@ -51,7 +50,6 @@ def main(imgs):
     # 予測開始
     res = clf.predict(t_image_vector3)
     for ret in res: print(ret)
-    print("end")
 
 if __name__ == '__main__':
     SEARCH_URL = r"https://www.google.co.jp/search?q=%s&source=lnms&tbm=isch&sa=X&biw=1439&bih=780"
@@ -66,3 +64,4 @@ if __name__ == '__main__':
     for img in images:
         targets.append(img['src'])
     main(targets)
+    # main(['http://blog-imgs-42.fc2.com/m/e/m/memoriup/03267.jpg'])

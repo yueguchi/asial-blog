@@ -4,7 +4,7 @@ import re
 import os
 from PIL import Image as resizer
 
-API_URL = "https://www.googleapis.com/customsearch/v1?key=AIzaSyCriEfww77ytwFzsJ1fxaIdrHofTbcST7w&cx=013797314580565152036:39ywvzmb4jw&q=%s&searchType=image&start=%s"
+API_URL = "https://www.googleapis.com/customsearch/v1?key=[APIキー]&cx=[ENGINE]&q=%s&searchType=image&start=%s"
 
 
 def getImageFromCustomAPI(start, end, word, kind):
