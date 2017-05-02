@@ -1,1 +1,5 @@
 .DS_store
+beauty-judge/images/**
+beauty-judge/faces/**
+animal_judge/images/**
+
