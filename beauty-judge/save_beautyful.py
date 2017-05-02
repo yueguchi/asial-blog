@@ -4,7 +4,7 @@ import re
 import os
 from PIL import Image as resizer
 
-API_URL = "https://www.googleapis.com/customsearch/v1?key=[APIキー]&cx=[ENGINE]&q=%s&searchType=image&start=%s"
+API_URL = "https://www.googleapis.com/customsearch/v1?key=[KEY]&cx=[ENGINE]&q=%s&searchType=image&start=%s"
 
 
 def getImageFromCustomAPI(start, end, word, kind):
@@ -35,9 +35,9 @@ def resizeImages(dirname, regular):
 
 def main():
     # 「人名,正面」にすると、より多くの正面画像を拾える
-    # words = ['北川景子', '吉高由里子', '新垣結衣', '榮倉奈々', '安室奈美恵', '長澤まさみ', '西内まりや', '麻生久美子', '倉科カナ', '井上真央', '石原さとみ', 'ガッキー']
+    # words = ['北川景子', '吉高由里子', '新垣結衣', '榮倉奈々', '安室奈美恵', '長澤まさみ', '西内まりや', '麻生久美子', '倉科カナ', '井上真央', '石原さとみ', 'ガッキー', '堀北真希']
     # words = ['フィーフィー', '安藤なつ', '澤穂希', '白鳥久美子', '光浦靖子', 'ブルゾンちえみ', 'おかずクラブオカリナ']
-    words = ['ガッキー']
+    words = ['堀北真希']
     for word in words:
         getImageFromCustomAPI(1, 92, word, "YES-" + word + "_")
 
