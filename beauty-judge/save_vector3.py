@@ -34,7 +34,7 @@ def getDatas():
             if (as_arrayed_img.shape[2] == 3):
                 datas.append(convertImageVector3(np.asarray(Image.open(image))))
                 # 「YES」と「NO」を抽出
-                labels.append(image.split("faces/target_")[1].split("-")[0])
+                labels.append(image.split("faces/target_")[1].split("-")[0].replace("reversed_", ""))
             else:
                 print("skip not rgb3")
     print("converted.")
