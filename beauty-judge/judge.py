@@ -56,7 +56,7 @@ if __name__ == '__main__':
     TARGET_IMG_SRC_PATTERN = r"https://encrypted-"
 
     targets = []
-    html = requests.get(SEARCH_URL % "ガッキー").text
+    html = requests.get(SEARCH_URL % "ハーマイオニー").text
     # BeautifulSoupでHTMLを解析
     soup = bs(html, 'html.parser')
     target_src = []
